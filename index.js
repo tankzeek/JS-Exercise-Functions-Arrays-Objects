@@ -35,8 +35,9 @@ function addNumbers(num1, num2) {
  * the returned value should look like: 'Goodbye, Andy. Have a great day.'
  * 
 */
-function sayGoodbye(/* code here */) {
+function sayGoodbye(name) {
   /* code here */
+  return `Goodbye, ${name}. Have a great day.`
 }
 
 /**
@@ -53,8 +54,12 @@ function sayGoodbye(/* code here */) {
  * Hint 1: The formula for converting celsius to fahrenheit is t*9/5 + 32 where t is the temperature in celsius.
  * Hint 2: There is a very easy way to round numbers in JS. Do a google search to find out how. 
 */
-function temperatureCtoF(/* code here */) {
+function temperatureCtoF(t) {
   /* code here */
+  
+  return Math.round(t*9/5 + 32); 
+
+
 }
 
 /**
@@ -74,8 +79,9 @@ function temperatureCtoF(/* code here */) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
+function temperatureInF(C) {
   /* code here */
+  return Math.round(24*9/5+32)
 }
 
 
@@ -95,10 +101,14 @@ function temperatureInF(/* code here */) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
+function makePersonObject(id, name, email) {
   /* code here */
-}
+ const Obj1 = {id:id, name:name, email:email}
 
+
+return Obj1;
+}
+  
 /**
  * ### Challenge `getName`
  * 
@@ -112,8 +122,9 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
+function getName(name) {
   /* code here */
+  return 'Hello, my name is " " "Ronnie"'
 }
 
 
@@ -132,9 +143,14 @@ function getName(/* code here */) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
+function appleIndex(arr) {
   /* code here */
+ // const arr = ['oranges','mangos','kiwi', 'apple']
+   // return appleIndex[arr];
+
 }
+  appleIndex();
+
 
 /**
  * ### Challenge `isItAnApple`
@@ -151,8 +167,14 @@ function appleIndex(/* code here */) {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
+function isItAnApple(arr) {
   /* code here */
+  for(let i = 0; i<arr.lenght; i++) {
+    if(arr[i]==='apple') {
+      arr[i] = true
+    }
+  }
+  
 }
 
 
